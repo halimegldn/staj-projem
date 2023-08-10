@@ -56,20 +56,7 @@ h2{
   margin:30px 0; 
   color: white;
 }
-input,textarea{
-  border:none;
-  border-bottom:1px solid white;
-  color:white;
-}
-input,textarea:focus{ outline:none; }
-label{
-  font-size:18px;
-  font-weight:normal;
-  position:absolute;
-  pointer-events:none;
-  left:5px;
-  top:10px;
-}
+
 .button{
   padding:2px 10px;
   background-color: orange;
@@ -131,12 +118,14 @@ h3{
     width: 50%;
   }
 } 
+
 .search-box {
   right: 5%;
-  background:#2f3640;
+  background: #2f3640; 
   height: 60px;
   border-radius: 40px;
-  padding: 10px; 
+  padding: 15px;
+  background-color:#282e40;
 }
 .search-box:hover > .search-text{
   width:100px;
@@ -147,23 +136,161 @@ h3{
   color: black;
 }
 .search-btn {
-  color:orange;
-  width: 40px;
-  height: 40px;
-  background: #2f3640;
+  color: orange;
+  width: 30px;
+  height:30px;
   border-radius: 50%;
+  background: #2f3640; 
   transition: 0.4s;
   cursor: pointer;
 }
 .search-btn > i {
-  font-size: 30px;
+  font-size: 20px;
 }
 .search-text {
+  border: none;
   background: none;
   outline: none;
   font-weight: normal;
   transition: 0.4s;
   line-height: 40px;
   width: 0px;
-/*   width: 250px; */
   }
+  @media (max-width:576px){
+    .logo{
+      width: 25%;
+    } 
+  } 
+  .form-control{
+    position: relative; 
+  }
+
+  .form-control input,textarea{
+    font-family: inherit;
+    
+  }
+  
+  .form-control.success input{
+    border-color: #2ecc71;
+  }
+  .form-control.error input{
+    border-color: #e74c3c;
+  }
+  
+ 
+  .form-control i{
+    visibility: hidden;
+  }
+  .form-control.success i.bi-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+  }
+  .form-control.error i.bi-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;  
+  }
+  .form-control small{
+    visibility: hidden;
+  }
+  .form-control.error small {
+    color: #e74c3c;
+    visibility: visible;  
+  }
+.form-control.error{
+  background: none;
+  border:none;
+}
+.form-control.success{
+  background: none;
+  border: none;
+}
+
+
+.wrapper {	
+	margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+
+} 
+
+.form-signin-heading {
+  margin-bottom: 30px;
+}
+
+
+.form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  
+}
+input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+input[type="password"] {
+  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.register a:hover ,.forget a:hover{
+  color: #282e40 !important;
+}
+
+.form_register {
+  width: 40%;
+  margin-left: 30%;
+  padding-top: 10%;
+}
+
+.form_register input {
+  width: 100%;
+  background: transparent;
+  border-bottom: solid 1px #7053c4;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 1rem;
+  padding: 0.5em 0.4em;
+  transition: all 0.4s;
+  color: #BDBDBD;;
+  margin: 0.7rem 0;
+}
+.form_register input:focus {
+  background: #7035c4;
+  transform: scale3d(1.06,1.06,1.06);
+}
+
+.register_buton {
+  background: transparent;
+  width: 50%;
+  margin-top: 2.5rem;
+  font-size: 1rem;
+  border: solid 1px #7053c4;
+  padding: 1em 0;
+  color: #bdc3c7;
+  transition: all 0.6s;
+}
+.register_buton:hover {
+  cursor:pointer;
+  background: #7035c4;
+}
+
+h4 {
+  color: #bdc3c7;
+  border-bottom: solid 1px #7035c4;
+  padding: 0 0 0.8em 0;
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 1em;
+}
+
